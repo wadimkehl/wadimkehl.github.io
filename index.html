@@ -6,54 +6,215 @@
 	<title>Wadim Kehl</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 	<link rel="stylesheet" href="assets/css/main.css" />
-	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	<link rel="icon" type="image/png" href="images/favicon.ico" sizes="32x32" />
+	<style>
+		.header-social {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			gap: 0.4rem;
+			width: 100%;
+		}
 
+		.social-links {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0.4rem;
+			margin-top: 0.2rem;
+			align-items: center;
+			justify-content: flex-end;
+			margin-left: auto;
+			padding-left: 0;
+		}
+
+		.social-links li {
+			margin: 0;
+		}
+
+		.social-link {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: 2.4rem;
+			height: 2.4rem;
+			padding: 0;
+			border-radius: 999px;
+			background: rgba(255, 255, 255, 0.08);
+			color: inherit;
+			text-decoration: none;
+			transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+			box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+		}
+
+		.social-link:hover,
+		.social-link:focus-visible {
+			background: rgba(255, 255, 255, 0.16);
+			transform: translateY(-2px) scale(1.01);
+			box-shadow: 0 6px 14px rgba(0, 0, 0, 0.16);
+		}
+
+		.social-icon {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: 1.35rem;
+			height: 1.35rem;
+			border-radius: 50%;
+			color: #fff;
+			flex-shrink: 0;
+			transition: transform 0.2s ease, box-shadow 0.2s ease;
+		}
+
+		.social-link:hover .social-icon,
+		.social-link:focus-visible .social-icon {
+			transform: scale(1.05);
+		}
+
+		.social-icon svg {
+			width: 1rem;
+			height: 1rem;
+			display: block;
+			fill: currentColor;
+		}
+
+		.social-link.scholar {
+			color: #4285F4;
+		}
+
+		.social-link.scholar .social-icon {
+			background: #4285F4;
+		}
+
+		.social-link.linkedin {
+			color: #0A66C2;
+		}
+
+		.social-link.linkedin .social-icon {
+			background: #0A66C2;
+		}
+
+		.social-link.github {
+			color: #24292f;
+		}
+
+		.social-link.github .social-icon {
+			background: #24292f;
+		}
+
+		.social-link.email {
+			color: #7b61ff;
+		}
+
+		.social-link.email .social-icon {
+			background: #7b61ff;
+		}
+
+		@media screen and (max-width: 736px) {
+			.header-social {
+				align-items: center;
+				width: auto;
+			}
+
+			.social-links {
+				justify-content: center;
+				margin-left: 0;
+			}
+		}
+	</style>
 </head>
 
 <body id="top">
 
 	<!-- Header -->
 	<header id="header">
-		<div class="inner">
-			<a href="#" class="image avatar"><img src="images/ich.jpg" alt="" /></a>
+		<div class="inner header-social">
+			<a href="#" class="image avatar"><img src="images/trip.jpg" alt="" /></a>
 			<h1>
-				<strong>Doing Science.</strong> </br>
-				<strong>In Computer Vision.</strong> </br>
-				<strong>And Machine Learning.</strong> </br>
-				Making the world a noisier place.
+				<strong>Working on embodied AI.</strong> </br>
+				Building safe systems. </br>
+				Shipping it to millions.
 			</h1>
+
+			<ul class="icons social-links">
+				<li>
+					<a href="https://scholar.google.com/citations?user=KVRo4HUAAAAJ" target="_blank"
+						rel="noopener noreferrer" class="social-link scholar">
+						<span class="social-icon" aria-hidden="true">
+							<svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+								<path
+									d="M12 2 3 7l9 5 9-5-9-5Zm0 7.2L4.7 7.8 12 4.2l7.3 3.6L12 9.2Zm-7 3.1v4.3l7 3.9 7-3.9v-4.3l-7 3.9-7-3.9Z" />
+							</svg>
+						</span>
+
+					</a>
+				</li>
+				<li>
+					<a href="https://www.linkedin.com/in/wadim-kehl-b11870b0/" target="_blank" rel="noopener noreferrer"
+						class="social-link linkedin">
+						<span class="social-icon" aria-hidden="true">
+							<svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+								<path
+									d="M6.94 8.5a1.56 1.56 0 1 0 0-3.12 1.56 1.56 0 0 0 0 3.12ZM5.5 9.75h2.88V18H5.5V9.75Zm4.8 0h2.76v1.12h.04c.38-.72 1.31-1.48 2.69-1.48 2.88 0 3.41 1.89 3.41 4.35V18h-2.88v-7.42c0-1.77-.03-4.05-2.47-4.05-2.47 0-2.85 1.93-2.85 3.92V18H10.3V9.75Z" />
+							</svg>
+						</span>
+
+					</a>
+				</li>
+				<li>
+					<a href="https://github.com/wadimkehl" class="social-link github">
+						<span class="social-icon" aria-hidden="true">
+							<svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+								<path
+									d="M12 2C6.48 2 2 6.48 2 12a10 10 0 0 0 6.84 9.53c.5.1.67-.22.67-.48v-1.7c-2.78.6-3.37-1.2-3.37-1.2-.46-1.17-1.12-1.48-1.12-1.48-.91-.62.07-.61.07-.61 1.01.07 1.54 1.04 1.54 1.04.9 1.54 2.36 1.1 2.93.84.09-.66.35-1.1.64-1.35-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.58 9.58 0 0 1 12 6.96c.85 0 1.71.11 2.51.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.85-2.35 4.7-4.58 4.95.36.31.68.92.68 1.85v2.74c0 .27.16.58.67.48A10.01 10.01 0 0 0 22 12c0-5.52-4.48-10-10-10Z" />
+							</svg>
+						</span>
+
+					</a>
+				</li>
+				<li>
+					<a href="mailto:wadimkehl@gmail.com" class="social-link email">
+						<span class="social-icon" aria-hidden="true">
+							<svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+								<path
+									d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4.2-8 5.3-8-5.3V6l8 5.3L20 6v2.2Z" />
+							</svg>
+						</span>
+
+					</a>
+				</li>
+			</ul>
 		</div>
+
 	</header>
 
-	<!-- Main -->
 	<div id="main">
 
 		<section id="one">
 			<header class="major">
-				<h2>Wadim Kehl</h2>
+				<h2>Wadim Kehl, Ph.D.</h2>
 			</header>
-			<p>Heya! I'm the Director of AD/ADAS Perception at <a href="https://woven.toyota/en/">Woven by Toyota</a>, 
-				contributing to the safety foundation of all Toyota and Lexus cars. Formerly, I've worked at the 
-				amazing <a href="http://www.tri.global/">Toyota Research Institute</a> on everything vision-related 
-				for cars and robots. Before that, I did my Master's and PhD studies at TUM. During my PhD time at
-				<a href="http://campar.in.tum.de/Main/WadimKehl"> CAMP</a> I was supervised by
-				<a href="http://campar.in.tum.de/Main/NassirNavab">Prof. Nassir Navab</a>,
-				<a href="http://campar.in.tum.de/Main/SlobodanIlic">PD Slobodan Ilic</a> and
-				<a href="http://campar.in.tum.de/Main/FedericoTombari"> Federico Tombari</a>.
-				Even before that, I did my Bachelor's at the University of Bonn, supervised by
-				<a href="http://vsteinhage.github.io/"> PD Volker Steinhage</a> and
-				<a href="http://www.ipb.uni-bonn.de/people/jens-behley/"> Jens Behley</a>.
-				</br>
+			<p>Heya! I'm the Director of AD/ADAS Perception at <a href="https://woven.toyota/en/">Woven by Toyota</a>,
+				contributing to the safety foundation of all Toyota and Lexus cars. In the past, I helped shipping
+				systems such as <a href="https://global.toyota/en/newsroom/corporate/35063150.html">Teammate Advanced
+					Drive</a>
+				and <a href="https://www.toyota.com/safety-sense/">Toyota/Lexus Safety Sense (TSS/LSS)</a>,
+				improving traffic safety for millions of people around the world.
+
+				</br> </br>
+				Formerly, I've been at the amazing <a href="http://www.tri.global/">Toyota Research Institute</a>,
+				working
+				on a wide range of vision-related research for cars and robots. I did my Master's and PhD studies at
+				TUM,
+				and my Bachelor's at University of Bonn, working with great minds such as
+				<a href="http://campar.in.tum.de/Main/NassirNavab">Nassir Navab</a>,
+				<a href="http://campar.in.tum.de/Main/SlobodanIlic">Slobodan Ilic</a>,
+				<a href="http://campar.in.tum.de/Main/FedericoTombari">Federico Tombari</a>,
+				<a href="http://vsteinhage.github.io/">Volker Steinhage</a> and
+				<a href="http://www.ipb.uni-bonn.de/people/jens-behley/">Jens Behley</a>.
+				</br> </br>
 				Reviewer for CVPR, ICCV, ECCV, TPAMI, IJCV, ICML, ACCV, IROS, AAAI.
-				<!--
-						<ul class="actions">
-							<li><a href="#" class="button">Show me the CV pronto!!</a></li>
-                            <li><a href="#work" class="button">Take me to your papers</a></li>
-						</ul>
-			-->
+
 			</p>
 		</section>
 
@@ -61,7 +222,8 @@
 			<h2>News</h2>
 			<ul>
 				<li>New CVPR 2023 paper on compositional temporal grounding! </li>
-				<li>New paper at ECCV 2022: photo-realistic rendering through neural networks for natural domain randomization! </li>
+				<li>New paper at ECCV 2022: photo-realistic rendering through neural networks for natural domain
+					randomization! </li>
 				<li>Accepted paper to CoRL2021 exploring single-shot 3D scene reconstruction with learned priors! </li>
 				<li>Two new articles out: ECCV2020 paper on autolabeling and a survey on differentiable rendering! </li>
 				<li>Finally achieved my oral hat-trick at the Big 3 (CVPR, ICCV, ECCV) as (co-)first author! :) </li>
@@ -89,12 +251,15 @@
 			<div class="paper" style="margin-bottom:10px;margin-top:10px">
 				<img src="images/thumbs/temporal_grounding.jpg" width="120" height="120" align="left"
 					style="margin-left:0px;margin-right:20px; border:1px solid #ddd" />
-				<b><i>DeCo: Decomposition and Reconstruction for Compositional Temporal Grounding via Coarse-To-Fine Contrastive Ranking. </i></b>
+				<b><i>DeCo: Decomposition and Reconstruction for Compositional Temporal Grounding via Coarse-To-Fine
+						Contrastive Ranking. </i></b>
 				<br />
 				Lijin Yang, Quan Kong, Hsuan-Kung Yang, <u>Wadim Kehl</u>, Yoichi Sato, Norimasa Kobori.
 				CVPR 2023.
 				<br />
-				<a href="https://openaccess.thecvf.com/content/CVPR2023/html/Yang_DeCo_Decomposition_and_Reconstruction_for_Compositional_Temporal_Grounding_via_Coarse-To-Fine_CVPR_2023_paper.html"> Paper </a> &ensp;
+				<a
+					href="https://openaccess.thecvf.com/content/CVPR2023/html/Yang_DeCo_Decomposition_and_Reconstruction_for_Compositional_Temporal_Grounding_via_Coarse-To-Fine_CVPR_2023_paper.html">
+					Paper </a> &ensp;
 			</div>
 			<div class="paper" style="margin-bottom:10px;margin-top:10px">
 				<img src="images/thumbs/neural_domain_randomization.jpg" width="120" height="120" align="left"
@@ -112,7 +277,7 @@
 					style="margin-left:0px;margin-right:20px; border:1px solid #ddd" />
 				<b><i>Single-Shot Scene Reconstruction. </i></b>
 				<br />
-				Sergey Zakharov, Rares Andrei Ambrus, Dennis Park, Vitor Campagnolo Guizilini, 
+				Sergey Zakharov, Rares Andrei Ambrus, Dennis Park, Vitor Campagnolo Guizilini,
 				<u>Wadim Kehl</u>, Fredo Durand, Joshua B. Tenenbaum, Vincent Sitzmann, Jiajun Wu, Adrien Gaidon.
 				CoRL 2021.
 				<br />
@@ -201,9 +366,7 @@
 				<br />
 				<a href="http://campar.in.tum.de/pub/hodan2018eccv/hodan2018eccv.pdf"> Paper </a>
 			</div>
-			<!--
-		<strong> All the papers below were submitted during my 4-years PhD at TUM: </strong>
-		-->
+
 			<br />
 			<div class="paper" style="margin-bottom:10px;margin-top:10px">
 				<img src="images/thumbs/ssd6d.jpg" width="120" height="120" align="left"
@@ -355,390 +518,13 @@
 			</div>
 			<br />
 			</section>
-			<!--
-<section id="work">
-    <h2>Publications</h2>
-    <div class="row">
-        <article class="6u 12u$(xsmall) work-item">
-            <a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /></a>
-            <h3>Magna sed consequat tempus</h3>
-            <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-        </article>
-        <article class="6u$ 12u$(xsmall) work-item">
-            <a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="" /></a>
-            <h3>Ultricies lacinia interdum</h3>
-            <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-        </article>
-        <article class="6u 12u$(xsmall) work-item">
-            <a href="images/fulls/03.jpg" class="image fit thumb"><img src="images/thumbs/03.jpg" alt="" /></a>
-            <h3>Tortor metus commodo</h3>
-            <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-        </article>
-        <article class="6u$ 12u$(xsmall) work-item">
-            <a href="images/fulls/04.jpg" class="image fit thumb"><img src="images/thumbs/04.jpg" alt="" /></a>
-            <h3>Quam neque phasellus</h3>
-            <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-        </article>
-        <article class="6u 12u$(xsmall) work-item">
-            <a href="images/fulls/05.jpg" class="image fit thumb"><img src="images/thumbs/05.jpg" alt="" /></a>
-            <h3>Nunc enim commodo aliquet</h3>
-            <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-        </article>
-        <article class="6u$ 12u$(xsmall) work-item">
-            <a href="images/fulls/06.jpg" class="image fit thumb"><img src="images/thumbs/06.jpg" alt="" /></a>
-            <h3>Risus ornare lacinia</h3>
-            <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-        </article>
-    </div>
-</section>
-
-
-				<!-- Four -->
-			<!--
-					<section id="four">
-						<h2>Elements</h2>
-
-						<section>
-							<h4>Text</h4>
-							<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-							This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-							This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-							<hr />
-							<header>
-								<h4>Heading with a Subtitle</h4>
-								<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-							</header>
-							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-							<header>
-								<h5>Heading with a Subtitle</h5>
-								<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-							</header>
-							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-							<hr />
-							<h2>Heading Level 2</h2>
-							<h3>Heading Level 3</h3>
-							<h4>Heading Level 4</h4>
-							<h5>Heading Level 5</h5>
-							<h6>Heading Level 6</h6>
-							<hr />
-							<h5>Blockquote</h5>
-							<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-							<h5>Preformatted</h5>
-							<pre><code>i = 0;
-
-while (!deck.isInOrder()) {
-print 'Iteration ' + i;
-deck.shuffle();
-i++;
-}
-
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-						</section>
-
-						<section>
-							<h4>Lists</h4>
-							<div class="row">
-								<div class="6u 12u$(xsmall)">
-									<h5>Unordered</h5>
-									<ul>
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Sagittis adipiscing lorem eleifend.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-									</ul>
-									<h5>Alternate</h5>
-									<ul class="alt">
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Sagittis adipiscing lorem eleifend.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-									</ul>
-								</div>
-								<div class="6u$ 12u$(xsmall)">
-									<h5>Ordered</h5>
-									<ol>
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Etiam vel felis at lorem sed viverra.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Etiam vel felis at lorem sed viverra.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-									</ol>
-									<h5>Icons</h5>
-									<ul class="icons">
-										<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-										<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-										<li><a href="#" class="icon fa-tumblr"><span class="label">Tumblr</span></a></li>
-									</ul>
-								</div>
-							</div>
-							<h5>Actions</h5>
-							<ul class="actions">
-								<li><a href="#" class="button special">Default</a></li>
-								<li><a href="#" class="button">Default</a></li>
-							</ul>
-							<ul class="actions small">
-								<li><a href="#" class="button special small">Small</a></li>
-								<li><a href="#" class="button small">Small</a></li>
-							</ul>
-							<div class="row">
-								<div class="6u 12u$(small)">
-									<ul class="actions vertical">
-										<li><a href="#" class="button special">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-								</div>
-								<div class="6u$ 12u$(small)">
-									<ul class="actions vertical small">
-										<li><a href="#" class="button special small">Small</a></li>
-										<li><a href="#" class="button small">Small</a></li>
-									</ul>
-								</div>
-								<div class="6u 12u$(small)">
-									<ul class="actions vertical">
-										<li><a href="#" class="button special fit">Default</a></li>
-										<li><a href="#" class="button fit">Default</a></li>
-									</ul>
-								</div>
-								<div class="6u$ 12u$(small)">
-									<ul class="actions vertical small">
-										<li><a href="#" class="button special small fit">Small</a></li>
-										<li><a href="#" class="button small fit">Small</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-
-						<section>
-							<h4>Table</h4>
-							<h5>Default</h5>
-							<div class="table-wrapper">
-								<table>
-									<thead>
-										<tr>
-											<th>Name</th>
-											<th>Description</th>
-											<th>Price</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>Item One</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Two</td>
-											<td>Vis ac commodo adipiscing arcu aliquet.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Three</td>
-											<td> Morbi faucibus arcu accumsan lorem.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Four</td>
-											<td>Vitae integer tempus condimentum.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Five</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-									</tbody>
-									<tfoot>
-										<tr>
-											<td colspan="2"></td>
-											<td>100.00</td>
-										</tr>
-									</tfoot>
-								</table>
-							</div>
-
-							<h5>Alternate</h5>
-							<div class="table-wrapper">
-								<table class="alt">
-									<thead>
-										<tr>
-											<th>Name</th>
-											<th>Description</th>
-											<th>Price</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>Item One</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Two</td>
-											<td>Vis ac commodo adipiscing arcu aliquet.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Three</td>
-											<td> Morbi faucibus arcu accumsan lorem.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Four</td>
-											<td>Vitae integer tempus condimentum.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Five</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-									</tbody>
-									<tfoot>
-										<tr>
-											<td colspan="2"></td>
-											<td>100.00</td>
-										</tr>
-									</tfoot>
-								</table>
-							</div>
-						</section>
-
-						<section>
-							<h4>Buttons</h4>
-							<ul class="actions">
-								<li><a href="#" class="button special">Special</a></li>
-								<li><a href="#" class="button">Default</a></li>
-							</ul>
-							<ul class="actions">
-								<li><a href="#" class="button big">Big</a></li>
-								<li><a href="#" class="button">Default</a></li>
-								<li><a href="#" class="button small">Small</a></li>
-							</ul>
-							<ul class="actions fit">
-								<li><a href="#" class="button special fit">Fit</a></li>
-								<li><a href="#" class="button fit">Fit</a></li>
-							</ul>
-							<ul class="actions fit small">
-								<li><a href="#" class="button special fit small">Fit + Small</a></li>
-								<li><a href="#" class="button fit small">Fit + Small</a></li>
-							</ul>
-							<ul class="actions">
-								<li><a href="#" class="button special icon fa-download">Icon</a></li>
-								<li><a href="#" class="button icon fa-download">Icon</a></li>
-							</ul>
-							<ul class="actions">
-								<li><span class="button special disabled">Special</span></li>
-								<li><span class="button disabled">Default</span></li>
-							</ul>
-						</section>
-
-						<section>
-							<h4>Form</h4>
-							<form method="post" action="#">
-								<div class="row uniform 50%">
-									<div class="6u 12u$(xsmall)">
-										<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
-									</div>
-									<div class="6u$ 12u$(xsmall)">
-										<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
-									</div>
-									<div class="12u$">
-										<div class="select-wrapper">
-											<select name="demo-category" id="demo-category">
-												<option value="">- Category -</option>
-												<option value="1">Manufacturing</option>
-												<option value="1">Shipping</option>
-												<option value="1">Administration</option>
-												<option value="1">Human Resources</option>
-											</select>
-										</div>
-									</div>
-									<div class="4u 12u$(small)">
-										<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-										<label for="demo-priority-low">Low Priority</label>
-									</div>
-									<div class="4u 12u$(small)">
-										<input type="radio" id="demo-priority-normal" name="demo-priority">
-										<label for="demo-priority-normal">Normal Priority</label>
-									</div>
-									<div class="4u$ 12u(small)">
-										<input type="radio" id="demo-priority-high" name="demo-priority">
-										<label for="demo-priority-high">High Priority</label>
-									</div>
-									<div class="6u 12u$(small)">
-										<input type="checkbox" id="demo-copy" name="demo-copy">
-										<label for="demo-copy">Email me a copy of this message</label>
-									</div>
-									<div class="6u$ 12u$(small)">
-										<input type="checkbox" id="demo-human" name="demo-human" checked>
-										<label for="demo-human">I am a human and not a robot</label>
-									</div>
-									<div class="12u$">
-										<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-									</div>
-									<div class="12u$">
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="special" /></li>
-											<li><input type="reset" value="Reset" /></li>
-										</ul>
-									</div>
-								</div>
-							</form>
-						</section>
-
-						<section>
-							<h4>Image</h4>
-							<h5>Fit</h5>
-							<div class="box alt">
-								<div class="row 50% uniform">
-									<div class="12u$"><span class="image fit"><img src="images/fulls/05.jpg" alt="" /></span></div>
-									<div class="4u"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
-									<div class="4u"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
-									<div class="4u$"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
-									<div class="4u"><span class="image fit"><img src="images/thumbs/04.jpg" alt="" /></span></div>
-									<div class="4u"><span class="image fit"><img src="images/thumbs/05.jpg" alt="" /></span></div>
-									<div class="4u$"><span class="image fit"><img src="images/thumbs/06.jpg" alt="" /></span></div>
-									<div class="4u"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
-									<div class="4u"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
-									<div class="4u$"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
-								</div>
-							</div>
-							<h5>Left &amp; Right</h5>
-							<p><span class="image left"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-							<p><span class="image right"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-						</section>
-
-					</section>
-				-->
 
 		</div>
 
-		<!-- Footer -->
-		<footer id="footer">
-			<div class="inner">
-				<ul class="icons">
-					<li><a href="https://www.facebook.com/wadim.kehl" class="icon fa-facebook"><span
-								class="label">Facebook</span></a></li>
-					<li><a href="https://twitter.com/wadimkehl" class="icon fa-twitter"><span
-								class="label">Twitter</span></a></li>
-					<li><a href="https://github.com/wadimkehl" class="icon fa-github"><span
-								class="label">Github</span></a>
-					</li>
-					<li><a href="mailto:wadimkehl@gmail.com" class="icon fa-envelope-o"><span
-								class="label">Email</span></a>
-					</li>
-				</ul>
-			</div>
-		</footer>
-
-		<!-- Scripts -->
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/jquery.poptrox.min.js"></script>
 		<script src="assets/js/skel.min.js"></script>
 		<script src="assets/js/util.js"></script>
-		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 		<script src="assets/js/main.js"></script>
 
 </body>
